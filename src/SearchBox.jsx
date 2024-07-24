@@ -15,9 +15,10 @@ export default function SearchBox() {
     let jsonResponse = await response.json();
     // console.log(jsonResponse);
     let result = {
+      city: city,
       temp: jsonResponse.main.temp,
       tempMin: jsonResponse.main.temp_min,
-      tempMin: jsonResponse.main.temp_max,
+      tempMax: jsonResponse.main.temp_max,
       humidity: jsonResponse.main.humidity,
       feelsLike: jsonResponse.main.feels_like,
       weather: jsonResponse.weather[0].description,
